@@ -18,12 +18,12 @@ import Loader from '../loader/loader.jsx';
 import Box from '../box/box.jsx';
 import FeedbackForm from '../feedback-form/feedback-form.jsx';
 import MenuBar from '../menu-bar/menu-bar.jsx';
-import Card from '../card/card.jsx';
 
 import PreviewModal from '../../containers/preview-modal.jsx';
 import ImportModal from '../../containers/import-modal.jsx';
 import WebGlModal from '../../containers/webgl-modal.jsx';
 import TipsLibrary from '../../containers/tips-library.jsx';
+import Cards from '../../containers/cards.jsx';
 
 import layout from '../../lib/layout-constants.js';
 import styles from './gui.css';
@@ -46,6 +46,7 @@ const GUIComponent = props => {
         activeTabIndex,
         basePath,
         blocksTabVisible,
+        cardsVisible,
         children,
         costumesTabVisible,
         feedbackFormVisible,
@@ -80,7 +81,6 @@ const GUIComponent = props => {
     if (isRendererSupported === null) {
         isRendererSupported = Renderer.isSupported();
     }
-    console.log(tipsLibraryVisible)
     return (
         <Box
             className={styles.pageWrapper}
@@ -101,8 +101,9 @@ const GUIComponent = props => {
             {isRendererSupported ? null : (
                 <WebGlModal />
             )}
-            {/* {tipsLibraryVisible ? <TipsLibrary /> : null} */}
-            {tipsLibraryVisible ? <Card vm={vm} /> : null}
+            {cardsVisible ? (
+                <Cards />
+            ) : null}
             <MenuBar />
             <Box className={styles.bodyWrapper}>
                 <Box className={styles.flexWrapper}>
@@ -187,6 +188,7 @@ GUIComponent.propTypes = {
     activeTabIndex: PropTypes.number,
     basePath: PropTypes.string,
     blocksTabVisible: PropTypes.bool,
+    cardsVisible: PropTypes.bool,
     children: PropTypes.node,
     costumesTabVisible: PropTypes.bool,
     feedbackFormVisible: PropTypes.bool,

@@ -10,7 +10,8 @@ import LoadButton from '../../containers/load-button.jsx';
 import SaveButton from '../../containers/save-button.jsx';
 import LanguageSelector from '../../containers/language-selector.jsx';
 
-import {openFeedbackForm, openTipsLibrary} from '../../reducers/modals';
+import {openFeedbackForm} from '../../reducers/modals';
+import {viewCards} from '../../reducers/cards';
 
 import styles from './menu-bar.css';
 
@@ -70,7 +71,7 @@ const mapDispatchToProps = dispatch => ({
         dispatch(openFeedbackForm());
     },
     onOpenTipLibrary: () => {
-        dispatch(openTipsLibrary());
+        dispatch(viewCards());
     }
 });
 
