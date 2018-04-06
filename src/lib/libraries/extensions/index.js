@@ -15,7 +15,7 @@ export default [
     },
     {
         name: 'Pen2',
-        extensionURL: 'https://github.com/NitroCipher/scratch-gui/blob/develop/src/lib/libraries/extensions/pen.js',
+        extensionURL: 'https://github.com/NitroCipher/scratch-gui/blob/develop/src/lib/libraries/extensions/pen2.js',
         iconURL: penImage,
         description: 'Draw with your 7-ups.',
         featured: true
