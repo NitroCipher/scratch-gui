@@ -15,18 +15,18 @@ export default [
     },
     {
         name: 'Pen2',
-        extensionURL: 'https://gist.githubusercontent.com/NitroCipher/fe1efec3d5b4462364c1827db8926933/raw/c84112cc893fe4c570f5eece9ed62d0c4326d12e/pen.js',
+        extensionURL: 'https://github.com/NitroCipher/scratch-gui/blob/develop/src/lib/libraries/extensions/pen.js',
         iconURL: penImage,
         description: 'Draw with your 7-ups.',
         featured: true
     },
-    {
-        name: 'Pen',
-        extensionURL: 'pen',
-        iconURL: penImage,
-        description: 'Draw with your sprites.',
-        featured: true
-    },
+//     {
+//         name: 'Pen',
+//         extensionURL: 'pen',
+//         iconURL: penImage,
+//         description: 'Draw with your sprites.',
+//         featured: true
+//     },
     {
         name: 'Video Sensing',
         extensionURL: 'videoSensing',
